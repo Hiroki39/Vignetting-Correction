@@ -128,6 +128,10 @@ def find_parameters(cm_x, cm_y, max_distance, im):
 
 
 def vignetting_correction(im):
+    """
+    Correct the vignetting of the image with the parameters that could minimize
+    the discrete entropy.
+    """
 
     # convert rgb image to grayscale
     imgray = cv2.transform(im, np.array([[0.2126, 0.7152, 0.0722]]))
